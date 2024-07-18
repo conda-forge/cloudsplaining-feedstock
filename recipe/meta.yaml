@@ -1,5 +1,5 @@
 {% set name = "cloudsplaining" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cloudsplaining-{{ version }}.tar.gz
-  sha256: 02fc4f8482b701b0b19b7ad543b579ba50f31b3e0389bb9f6973391891d6ecd1
+  sha256: f8763ecde24de928cfb3ecd16972c96f48c2a576750c1db4451c9e098ceaf203
 
 build:
   entry_points:

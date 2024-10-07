@@ -1,5 +1,5 @@
 {% set name = "cloudsplaining" %}
-{% set version = "0.6.3" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cloudsplaining-{{ version }}.tar.gz
-  sha256: f8763ecde24de928cfb3ecd16972c96f48c2a576750c1db4451c9e098ceaf203
+  sha256: 2d8a1d1a3261368a39359bb23aa7d6ac9add274728ff24877b710cdfa96d96af
 
 build:
   entry_points:
@@ -29,7 +29,7 @@ requirements:
     - click-option-group
     - jinja2
     - markdown
-    - policy_sentry >=0.11.3
+    - policy_sentry <0.14,>=0.13.0
     - pyyaml
     - schema
 

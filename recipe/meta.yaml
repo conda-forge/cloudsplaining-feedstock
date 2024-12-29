@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cloudsplaining-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cloudsplaining-{{ version }}.tar.gz
   sha256: 2d8a1d1a3261368a39359bb23aa7d6ac9add274728ff24877b710cdfa96d96af
 
 build:
@@ -14,14 +14,14 @@ build:
     - cloudsplaining=cloudsplaining.bin.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - boto3
     - botocore
     - cached-property
@@ -41,6 +41,7 @@ test:
     - cloudsplaining --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/salesforce/cloudsplaining

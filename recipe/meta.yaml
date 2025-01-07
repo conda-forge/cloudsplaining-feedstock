@@ -29,7 +29,7 @@ requirements:
     - click-option-group
     - jinja2
     - markdown
-    - policy_sentry <0.14,>=0.13.0
+    - policy_sentry >=0.14.0,<0.15
     - pyyaml
     - schema
 

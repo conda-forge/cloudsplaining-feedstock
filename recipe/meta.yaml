@@ -1,5 +1,5 @@
 {% set name = "cloudsplaining" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cloudsplaining-{{ version }}.tar.gz
-  sha256: 2d8a1d1a3261368a39359bb23aa7d6ac9add274728ff24877b710cdfa96d96af
+  sha256: 02029432316a56551e58296496bc80e4778a58468273dbcd61df4ed2c369ede4
 
 build:
   entry_points:
     - cloudsplaining=cloudsplaining.bin.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -29,7 +29,7 @@ requirements:
     - click-option-group
     - jinja2
     - markdown
-    - policy_sentry <0.14,>=0.13.0
+    - policy_sentry >=0.14.0,<0.15
     - pyyaml
     - schema
 
